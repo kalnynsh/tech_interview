@@ -156,7 +156,7 @@ function randomThree()
 }
 
 $resultArray =  randomThree();
-echo explode(', ', $resultArray);
+echo implode(', ', $resultArray);
 echo '<br>';
 
 echo '<h4>10. Какое число выведет данный код?</h4>';
