@@ -149,16 +149,14 @@ function randomThree()
     $result = [$first, $second, $third];
 
     if (array_sum($result) < 15) {
-        randomThree();
+        return randomThree();
     }
 
-    if (array_sum($result) >= 15) {
-        return $result;
-    }
+    return $result;
 }
 
 $resultArray =  randomThree();
-echo $resultArray[0] . ', ' . $resultArray[1] . ', ' . $resultArray[2];
+echo implode(', ', $resultArray);
 echo '<br>';
 
 echo '<h4>10. Какое число выведет данный код?</h4>';
