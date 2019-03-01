@@ -2,45 +2,67 @@
 
 namespace lesson02;
 
-interface MyInt
+/** 5. Найдите все ошибки в коде: */
+
+interface MyInterface
 {
-    public function funcI();
-    private function funcP();
+    public function methodI();
+    public function methodP();
 }
 
 class A
 {
-    protected $prop1;
-    private $prop2;
+    protected $property1;
+    private $property2;
 
-    public function funcA()
+    public function getProperty1()
     {
-        return $this->prop2;
+        return $this->property1;
+    }
+
+    public function setProperty1($data): void
+    {
+        $this->property1 = $data;
+    }
+
+    public function getProperty2()
+    {
+        return $this->property2;
+    }
+
+    public function setProperty2($data): void
+    {
+        $this->property2 = $data;
     }
 }
 
 class B extends A
 {
-    public function funcB()
+    public function getClass()
     {
-        return $this->prop1;
+        return self::class;
     }
 }
 
-class C extends B implements MyInt
+class C extends A implements MyInterface
 {
-    public function funcB()
-    {
-        return $this->prop1;
-    }
-
-    private function funcP()
+    public function methodP(): int
     {
         return 123;
     }
+
+    public function methodI(): string
+    {
+        return 'Some useful data from ' . self::class;
+    }
 }
 
+echo 'Object B' . PHP_EOL;
 $b = new B();
-$b->funcA();
+$b->setProperty2('Big data');
+echo $b->getProperty2() . ' from '. $b->getClass() . PHP_EOL;
+echo '____________________' . PHP_EOL;
+
+echo 'Object C' . PHP_EOL;
 $c = new C();
-$c->funcI();
+echo $c->methodI() . PHP_EOL;
