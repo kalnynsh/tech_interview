@@ -1,0 +1,15 @@
+.one {
+    color: blue;
+}
+
+.two {
+    color: #466d22;
+}
+
+.three {
+    background-color: rgb(253, 247, 158);
+}
+
+.three:odd {
+    background-color: rgb(238, 235, 193);
+}
