@@ -1,17 +1,13 @@
 jQuery(document).ready(function($) {
-    let timerId = setTimeout(function() {
-        if ($('.one').length) {
-            $('.one')
-                .addClass('three')
-                .html('New one');
-        }
+  setTimeout(function() {
+    $('.one')
+      .addClass('three')
+      .html('New one');
 
-        if ($('.two').length) {
-            $('.two').addClass('three');
-        }
-    }, 2000);
+    $('.two').addClass('three');
+  }, 2000);
 
-    setTimeout(function() {
-        $('.three').slideUp();
-    }, 3000);
+  setTimeout(function() {
+    $('.three').slideUp();
+  }, 3000);
 });
