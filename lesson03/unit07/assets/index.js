@@ -1,9 +1,7 @@
 jQuery(document).ready(function($) {
-    let timerId = setTimeout(function() {
-        if ($('div[name="red"] span').length) {
-            $('div[name="red"] span')
-                .addClass('red');
-        }
-
-    }, 2000);
+  $('button.change-to-red').click(
+    function() {
+      $('div[name="red"] span').toggleClass('red');
+    }
+  );
 });

@@ -2,3 +2,8 @@
     background-color: rgb(207, 146, 136);
     padding: 6px;
 }
+
+.change-to-red {
+    color: #535252;
+    margin-bottom: 10px;
+}
