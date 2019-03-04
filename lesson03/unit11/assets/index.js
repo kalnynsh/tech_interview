@@ -15,6 +15,7 @@ $(document).ready(function() {
   function checkout(answer, result, correct, tooMany, tooSmall) {
     if (!isNumeric(result)) {
       alert('Введено не число, повторите ввод');
+      return;
     }
 
     if (result == answer) {
@@ -25,7 +26,7 @@ $(document).ready(function() {
       return tooMany();
     }
 
-    if (result > answer) {
+    if (result < answer) {
       return tooSmall();
     }
   }
