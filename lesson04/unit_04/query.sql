@@ -12,3 +12,14 @@ FROM
 -- Mexico
 -- UK
 -- Sweden
+
+-- Вариант 2, через UNION - выбираются уникальные значения
+SELECT
+	country
+FROM
+	customers
+UNION
+SELECT
+	country
+FROM
+	customers ;
