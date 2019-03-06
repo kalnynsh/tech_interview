@@ -64,3 +64,40 @@ LIMIT 1 ;
 -- Не выводить информацио БД, особенно о ее структуре.
 
 -- Выполнять логирование запросов к БД в лог файл или саму БД.
+
+-- примеры:
+-- экранирование спецсимволов: \x00, \n, \r, \, ', " и \x1a
+-- `php` $mysqli = new mysqli('localhost', 'userD', 'pswdD', 'wold') ;
+-- `php` $mysqli->query("CREATE TEMPORERY TABLE myCity LIKE City") ;
+-- `php` $city = "s' Moscow";
+-- экранируем сроку
+-- `php` $city = $mysqli->real_escape_string($city) ;
+-- "s\' Moscow";
+-- `php` $mysql->query("INSERT INTO myCity (name) VALUES ('$city')") ;
+-- `php` $mysql->close() ;
+
+-- Проверить через get_magic_quotes_gpc() и отключить функционал
+-- `Magic quotes` - автоматической замены кавычки на обратный слэш (\) и кавычку при операциях ввода/вывода.
+-- Для предотвращения двойного экранирования.
+-- Можно убирать \\ через:
+-- `php` stripslashes($str) ;
+
+-- Using prepares statements
+-- Параметры подготовленного запроса не требуется экранировать кавычками;
+-- драйвер это делает автоматически.
+-- Если в приложении используются исключительно подготовленные запросы.
+--
+-- <?php
+-- $stmt = $dbh->prepare("INSERT INTO registry_tbl (name, value) VALUES (:name, :value)");
+-- $stmt->bindParam(':name', $name);
+-- $stmt->bindParam(':value', $value);
+
+-- // вставим одну строку
+-- $name = 'one';
+-- $value = 1;
+-- $stmt->execute();
+
+-- // теперь другую строку с другими значениями
+-- $name = 'two';
+-- $value = 2;
+-- $stmt->execute();
