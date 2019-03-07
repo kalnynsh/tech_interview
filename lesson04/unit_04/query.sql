@@ -23,3 +23,11 @@ SELECT
 	country
 FROM
 	customers ;
+
+-- Вариант 3, через GROUP BY
+SELECT
+	country
+FROM
+	customers
+GROUP BY
+	country ;
