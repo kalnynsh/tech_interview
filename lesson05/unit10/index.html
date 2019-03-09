@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>HTML,CSS</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="stylesheet" href="../common/css/main.css" />
+        <link rel="stylesheet" href="assets/css/index.css">
+    </head>
+
+    <body>
+
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-navajowhite">
+            <h5 class="my-0 mr-md-auto font-weight-normal">Урок 05</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="#">Задание 10</a>
+            </nav>
+            <a class="btn btn-outline-primary" href="#">урок 5</a>
+        </div>
+
+        <div class="bg-cornsilk">
+            <div class="lesson-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-5">Задание 10</h1>
+                <p class="text-justified">
+                    Перечислить по пять знакомых вам псевдоклассов и псевдостилей с указанием их функционала.
+                </p>
+            </div>
+
+            <div class="container w-85">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <p class="caption-table">Псевдоклассы и псевдостили</p>
+                        <table class="unit10-table">
+                            <thead>
+                                <tr>
+                                    <th>№ п/п</th>
+                                    <th>Наименование</th>
+                                    <th>Описание</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">10.1</td>
+                                    <td>
+                                        Псевдо классы ссылки (anchor pseudo-classes)
+                                    </td>
+                                    <td>
+                                        <table class="tbl-inline">
+                                            <tr>
+                                                <td><code>a:link</code></td>
+                                                <td>отображение ссылки, по которой еще не переходил пользователь</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>a:visited</code></td>
+                                                <td>отображение ссылки, по которой уже переходил пользователь</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>a:hover</code></td>
+                                                <td>отображение ссылки или др. HTML элемента, при наведении курсора</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>a:active</code></td>
+                                                <td>отображение выбранной ссылки</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">-</td>
+                                    <td>
+                                        Псевдо классы<br>
+                                        <code>Селектор:first-child</code>,<br>
+                                        <code>Селектор:last-child</code>
+                                    </td>
+                                    <td>
+                                        <table class="tbl-inline">
+                                            <tr>
+                                                <td><code>p:first-child</code></td>
+                                                <td>
+                                                    соответсвует первому элементу из группы,
+                                                    имеющий общего родителя
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>p:last-child</code></td>
+                                                <td>
+                                                    соответсвует последнему элементу из группы,
+                                                    имеющий общего родителя
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">-</td>
+                                    <td>
+                                        Псевдо классы<br>
+                                        <code>Селектор:nth-child(odd|even|&lt;число&gt;|&lt;выражение&gt;)</code>
+                                        <p>
+                                            Псевдокласс :nth-child используется для добавления <br>
+                                            стиля к элементам на основе нумерации в дереве элементов.
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <table class="tbl-inline">
+                                            <tr>
+                                                <td><code>odd</code></td>
+                                                <td>
+                                                    Все нечётные номера элементов.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>even</code></td>
+                                                <td>
+                                                    Все чётные номера элементов.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>&lt;число&gt;</code></td>
+                                                <td>
+                                                    Порядковый номер дочернего элемента относительно своего родителя.
+                                                    <br>Нумерация начинается с 1, это будет первый элемент в списке.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>&lt;выражение&gt;</code></td>
+                                                <td>
+                                                    Задаётся в виде an±b, где a и b — целые числа, а n — счётчик,<br>который
+                                                    автоматически принимает значение 0, 1, 2...
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">-</td>
+                                    <td>
+                                        Псевдо классы<br>
+                                        <code>Селектор:nth-of-type(odd|even|&lt;число&gt;|&lt;выражение&gt;)</code>
+                                        <p>
+                                            Псевдокласс :nth-of-type используется для добавления <br>
+                                            стиля к элементам указанного типа на основе нумерации в дереве элементов.
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <table class="tbl-inline">
+                                            <tr>
+                                                <td><code>odd</code></td>
+                                                <td>
+                                                    Все нечётные номера элементов.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>even</code></td>
+                                                <td>
+                                                    Все чётные номера элементов.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>&lt;число&gt;</code></td>
+                                                <td>
+                                                    Порядковый номер дочернего элемента относительно своего родителя.
+                                                    <br>Нумерация начинается с 1, это будет первый элемент в списке.
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>&lt;выражение&gt;</code></td>
+                                                <td>
+                                                    Задаётся в виде an±b, где a и b — целые числа, а n — счётчик,<br>который
+                                                    автоматически принимает значение 0, 1, 2...
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">10.2</td>
+                                    <td>
+                                        Псевдо элементы (pseudo elements)
+                                    </td>
+                                    <td>
+                                        <table class="tbl-inline">
+                                            <tr>
+                                                <td><code>p::after</code></td>
+                                                <td>вставка контента после <i>p</i> элемента</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>p::before</code></td>
+                                                <td>вставка контента до <i>p</i> элемента</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>p::first-letter</code></td>
+                                                <td>выбор первой буквы у каждого <i>p</i> элемента</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>p::first-line</code></td>
+                                                <td>выбор первой строки у каждого <i>p</i> элемента</td>
+                                            </tr>
+                                            <tr>
+                                                <td><code>p::selection</code></td>
+                                                <td>выбор выделенного пользователем текста в <i>p</i> элементе</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                    <div class="row">
+                        <div class="col-12 col-md">
+                            <img class="mb-2" src="#" alt="" width="24" height="24" />
+                            <small class="d-block mb-3 text-muted">&copy; 2019</small>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Новости</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Клевое</a></li>
+                                <li><a class="text-muted" href="#">Странное</a></li>
+                                <li><a class="text-muted" href="#">Интиресное</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Ресурсы</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Ресурс</a></li>
+                                <li><a class="text-muted" href="#">Классый</a></li>
+                                <li><a class="text-muted" href="#">Еще</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>О нас</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Команда</a></li>
+                                <li><a class="text-muted" href="#">Расположение</a></li>
+                                <li><a class="text-muted" href="#">Предлагаем</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
