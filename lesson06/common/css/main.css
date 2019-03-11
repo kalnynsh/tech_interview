@@ -8,6 +8,10 @@ html {
     }
 }
 
+.container {
+    max-width: 86%;
+}
+
 .lesson-header {
     max-width: 960px;
 }
@@ -82,4 +86,8 @@ thead,
 tfoot {
     background-color: #f0f0f0;
     text-align: center;
+}
+
+.td-image {
+    max-width: 4%;
 }
