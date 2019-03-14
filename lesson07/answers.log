@@ -1,0 +1,140 @@
+1) Укажите отличия между PHP 5.6 и 7, которые помните (как можно больше). Какие из них Вы считаете важными и удобными?
+
+Увеличена производительность PHP-7 относительно PHP-5.6
+Добавлен оператор ??,
+$val = $value ?? 'default;
+
+Добавлен оператор <=>
+$val1 <=> $val2 ; 1 (слева больше), 0, -1 (справа больше)
+
+Добавлен typehinting
+function (int $val1): int
+{
+    // Code
+}
+
+Добавлены анонимные классы
+new class {
+    public function info()
+    {
+        //Code;
+    }
+}
+
+2) Чем отличается __autoload от spl_autoload_register?
+ spl_autoload_register - регистрирует очередь из функций автозагрузки, позволяет создать из несколько
+
+__autoload - функция определяющая автозагрузку класса
+реализует только один метод
+
+3) Что такое ECMAScript? Чем он отличается от JavaScript?
+ECMAScript - официальное название. JavaScript - название данное на заре создания как маркетинговый ход связи с Java.
+ECMA расшифровывается European Computer Manufacturer's Association.
+ECMAScript - спецификация языка снатдартизованная Ecma International in ECMA-262 and ISO/IEC 16262.
+JavaScript™ – зарегистрированная торговая марка, принадлежащая корпорации Oracle.
+ECMAScript - не зависимая от JavaScript™ (Oracle) спецификация.
+
+4) Какие типы БД Вы знаете? Приведите примеры.
+    Реляционные - MySQL, Oracle SQL, MS SQL;
+    Документо-ориентированные (NoSQL) - MongoDB;
+    Объектно-ориентированные - PostgreSQL;
+    Клоночные - ClickHouse;
+    Графовые - new4j.
+
+5) Для чего нужны составные индексы в БД?
+    Составные индексы используют два поля таблицы,
+    это дополнительно к выборке по составному индексу позволяет сортировать по одной из его частей.
+    composite_index = last_name + passport_number; ORDER BY last_name;
+
+
+6) Практическая задача.
+Спроектируйте систему новостной ленты по нижеуказанным требованиям.
+    Нужно: создать схему БД, указать необходимые индексы, перечислить необходимый стек технологий.
+    Лента новостей выводится от самой новой новости к более старым по убыванию.
+    Каждая новость имеет ленту комментариев.
+    Лента комментариев выводится от самого старого комментария по возрастанию.
+    И лента новостей, и лента комментариев имеют функционал пагинации – новости по 10 единиц, комментарии – по 25.
+    Комментарии могут оставлять только авторизованные пользователи.
+    И новостей, и комментариев может быть очень много.
+
+PHP Yii2, MySQL
+
+utf8mb4 utf8mb4_unicode Engine = InnoDB
+
+# Таблица новостей
+news_table
+id INT(11) Primary Key Not Null Auto_increment
+title Varchar(255) # Заголовок новости
+preview Varchar(255) # Краткое содержание
+content TEXT() # Cодержание
+slug Varchar(255) # Уникальный слаг новости
+status INT(1) # Статус новости (черновик, активная)
+created_at INT(11)
+updated_at INT(11)
+Unique slug
+Index slug
+
+# Таблица комментариев
+comments_table
+id INT(11) Primary Key Not Null Auto_increment
+content Text()
+user_id INT(11) # Ссылочный ключ - принадлежность пользователю (One2Many)
+news_id INT(11) # Ссылочный ключ - принадлежность новости (One2Many)
+created_at INT(11)
+updated_at INT(11)
+Forein Key (user_id) References users_table (id)
+Forein Key (news_id) References news_table (id)
+Index idx_user_id
+Index idx_news_id
+
+# Таблица пользователей
+users_table
+id INT(11) Primary Key Not Null Auto_increment
+email Varchar(124)
+login Varchar(64)
+name Varchar(64)
+password Varchar(255)
+created_at INT(11)
+updated_at INT(11)
+Unique email
+Unique login
+Index email
+Index login
+
+# Таблица `связи` пользователь - его роль (Many2Many)
+user_roles_table
+id INT(11) Primary Key Not Null Auto_increment
+user_id INT(11) # Ссылочный ключ - принадлежность пользователю
+role_id INT(11) # Ссылочный ключ - принадлежность к роли
+Forein Key (user_id) References users_table (id)
+Forein Key (role_id) References roles_table (id)
+Index idx_user_id
+Index idx_role_id
+
+# Таблица ролей
+roles_table
+id INT(11) Primary Key Not Null Auto_increment
+name Varchar(64) # Название роли (администратор, пользователь, копирайтер и проч.)
+
+
+7) * Усложнение задачи номер 6.
+    a. Напишите запрос, который будет отвечать за пагинацию новостей или комментариев.
+
+    SELECT *
+    FROM news_table n
+    WHERE n.status = 1
+    ORDER BY n.created_at DESC
+    LIMIT 10 10
+    ;
+
+    b. Где лучше сортировать выводимые данные – на уровне БД или на уровне логики? Почему?
+        Cортировать выводимые данные лучше на уровне логики - гибкости и скорости.
+
+    c. Сверстайте прототип ленты новостей (без поддержки логики, с AJAX-заглушками).
+
+8) ** Вам нужно организовать хранение большого списка файлов в системе CentOS. Как вы организуете структуру директорий?
+    Возможно организовать структуру директорий с наименованиями
+    по первым 3м символам от хэша содержания|наименования файла.
+
+level_01/ # md4sum file_name[0, 2]
+    /level_02/ # md4sum file_name[3, 5]

@@ -40,6 +40,8 @@ if ($childPid) {
 // Make child main process
 posix_setsid();
 
+declare(ticks = 1);
+
 // Include Payload
 include __DIR__ . '/Daemon.php';
 include __DIR__ . '/ExampleCls.php';
