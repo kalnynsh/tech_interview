@@ -1,0 +1,67 @@
+.w-85 {
+    max-width: 85%;
+}
+
+.bg-saddlebrown {
+    background-color: #8B4513;
+}
+
+.bg-navajowhite {
+    background-color: #FFDEAD;
+}
+
+.bg-cornsilk {
+    background-color: #FFF8DC;
+}
+
+.bg-peru {
+    background-color: #CD853F;
+}
+
+.text-justified {
+    text-align: justify;
+    font-size: 1.1rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.caption-table {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.unit10-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5%;
+
+}
+
+.unit10-table th,
+.unit10-table td,
+th,
+td {
+    border: 1px solid #333;
+    padding: 3px;
+}
+
+.unit10-table thead,
+.unit10-table tfoot,
+thead,
+tfoot {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.tbl-inline {
+    border: none;
+}
+
+.tbl-inline td {
+    border: none;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>HTML,CSS</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="stylesheet" href="../common/css/main.css" />
+        <link rel="stylesheet" href="assets/css/index.css">
+    </head>
+
+    <body>
+
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-navajowhite">
+            <h5 class="my-0 mr-md-auto font-weight-normal">Урок 05</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="#">Задание 9</a>
+            </nav>
+            <a class="btn btn-outline-primary" href="#">урок 5</a>
+        </div>
+
+        <div class="bg-cornsilk">
+            <div class="lesson-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-5">Задание 9</h1>
+                <p class="text-justified">
+                    Есть ячейка таблицы, в ней 3 &lt;div&gt;, в каждом &lt;div&gt; – по слову.
+                    На первый &lt;div&gt; применен стиль float: left;
+                    на третий – float: right.
+                    Что нужно применить на второй &lt;div&gt;,
+                    чтобы все три надписи/дивы были в одной горизонтальной строке,
+                    то есть первый имел бы выравнивание по левому краю, третий – по правому, а второй – по
+                    центру?
+                </p>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <p class="caption-table">Работа с float</p>
+                        <table class="unit9-table">
+                            <thead>
+                                <tr>
+                                    <th>№ п/п</th>
+                                    <th>Элементы</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">9</td>
+                                    <td class="clear-fix">
+                                        <div class="pull-left bg-peru">Ани</div>
+                                        <div class="pull-left bg-saddlebrown">Бени</div>
+                                        <div class="pull-right bg-peru">Раба</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="container">
+                <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                    <div class="row">
+                        <div class="col-12 col-md">
+                            <img class="mb-2" src="#" alt="" width="24" height="24" />
+                            <small class="d-block mb-3 text-muted">&copy; 2019</small>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Новости</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Клевое</a></li>
+                                <li><a class="text-muted" href="#">Странное</a></li>
+                                <li><a class="text-muted" href="#">Интиресное</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Ресурсы</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Ресурс</a></li>
+                                <li><a class="text-muted" href="#">Классый</a></li>
+                                <li><a class="text-muted" href="#">Еще</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>О нас</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Команда</a></li>
+                                <li><a class="text-muted" href="#">Расположение</a></li>
+                                <li><a class="text-muted" href="#">Предлагаем</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>

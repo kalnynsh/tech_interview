@@ -1,0 +1,54 @@
+body {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(to right, #25c481, #25b7c4);
+    ;
+}
+
+.container {
+    max-width: 85%;
+}
+
+.h1-color {
+    color: #fff;
+}
+
+.tbl {
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(241, 241, 241, 1);
+    border-collapse: collapse;
+    white-space: normal;
+}
+
+.tbl-header {
+    background-color: rgba(235, 235, 235, 0.143);
+}
+
+.tbl th,
+.tbl td {
+    padding: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    word-wrap: break-word;
+}
+
+tr:nth-of-type(even) td {
+    background-color: rgba(235, 235, 235, 0.143);
+}
+
+.term {
+    color: blue;
+}
+
+.tbl-inline {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    color: inherit;
+    white-space: normal;
+}
+
+.tbl-inline td {
+    font-size: 0.8rem;
+    border: none;
+}

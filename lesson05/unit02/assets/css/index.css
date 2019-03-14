@@ -1,0 +1,45 @@
+.bg-saddlebrown {
+    background-color: #8B4513;
+}
+
+.bg-cornsilk {
+    background-color: #FFF8DC;
+}
+
+.caption-table {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.unit9-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.unit9-table th,
+.unit9-table td,
+th,
+td {
+    border: 1px solid #333;
+    padding: 3px;
+}
+
+.unit9-table thead,
+.unit9-table tfoot,
+thead,
+tfoot {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.bg-peru {
+    background-color: #CD853F;
+}
