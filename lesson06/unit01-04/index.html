@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Linux</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="stylesheet" href="../common/css/main.css" />
+    </head>
+
+    <body>
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-navajowhite">
+            <h5 class="my-0 mr-md-auto font-weight-normal">Урок 06</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="#">Задания 1-4</a>
+            </nav>
+            <a class="btn btn-outline-primary" href="#">урок 6</a>
+        </div>
+        <div class="bg-cornsilk">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <p class="caption-table">Linux </p>
+                        <table class="unit-table">
+                            <thead>
+                                <tr>
+                                    <th>№ п/п</th>
+                                    <th>Вопрос</th>
+                                    <th>Ответ</th>
+                                    <th>Примечание</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center">1</td>
+                                    <td>
+                                        Как создать новую ветку в GIT?
+                                    </td>
+                                    <td class="text-justified">
+                                        <p><code>
+                                                $ git checkout -b [new_branch_name];
+                                            </code></p>
+                                        <p></p><code>
+                                            $ git branch [new_branch_name];
+                                        </code></p>
+                                    </td>
+                                    <td>
+                                        git checkout -b; # переключает на созданную ветку
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">2</td>
+                                    <td>
+                                        Какие еще прикладные программы могут обеспечивать работу сайта?
+                                    </td>
+                                    <td class="text-justified">
+                                        <p>
+                                            <b>Iptables</b> — утилита командной строки, стандартный интерфейс
+                                            управления
+                                            работой межсетевого экрана (брандмауэра или FireWall)
+                                            Netfilter для ядер Linux.
+                                        </p>
+                                        <p>Для Ubuntu облегченное управление Firewall
+                                            - утилита <b>UFW</b> (Uncomplicated FireWall).
+                                        </p>
+                                        <ul><b>Системы мониторинга Web сервера:</b>
+                                            <li>Performance Co-Pilot (https://pcp.io/)</li>
+                                            <li>Anturis (https://anturis.com/) облачная платформа (SaaS)</li>
+                                            <li>SeaLion облачное решение</li>
+                                            <li>Icings Open source система мониторинга (https://www.icinga.org/)</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td>
+                                        Какие текстовые редакторы есть в Linux-подобных системах?
+                                    </td>
+                                    <td class="text-justified">
+                                        Vim, Nano, Emacs, Gedit
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">4</td>
+                                    <td>
+                                        Что означают показатели в выводе команды top?
+                                    </td>
+                                    <td class="text-justified">
+                                        <ul><b>Начиная с верхней строчки:</b>
+                                            <li>отображение текущего времени</li>
+                                            <li>время прошедшее от старта</li>
+                                            <li>количество активных сессий (1 user)</li>
+                                            <li>
+                                                KiB Mem|Swap секции использования памяти:<br>
+                                                всего, свободно, занято, кэш обращения к диску, общий объем
+                                            </li>
+                                            <li>
+                                                <ul>Tasks:(Задачи)
+                                                    <li>total - общее кол. процессов в ОС></li>
+                                                    <li>running -процессы выполняеме CPU</li>
+                                                    <li>
+                                                        sleep - процессы ожидающие завершения (Interruptible sleep),<br>
+                                                        процесы ожидающие завершения ввода/вывода
+                                                    </li>
+                                                    <li>stopped - остановленные процессы</li>
+                                                    <li>
+                                                        zombie
+                                                        - структуры данных с завершенными дочерними процессами
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul>%Cpu(s) распредение в % загрузки процессора:
+                                                    <li><i>us</i> - в пользовательском пространстве</li>
+                                                    <li><i>sy</i> - в пространстве ядра</li>
+                                                    <li>
+                                                        <i>ni</i>
+                                                        - процессы с ручной установкой "nice" параметра, <br>
+                                                        ранжирование приоритетов исполнения
+                                                    </li>
+                                                    <li><i>id</i> бездействие (idle)</li>
+                                                    <li>
+                                                        <i>wa</i> ожидание завершения ввода/вывода (waiting for I/O)
+                                                    </li>
+                                                    <li>
+                                                        <ul>
+                                                            затраты на:
+                                                            <li>
+                                                                <i>hi</i> - hardware interrups, прерывания оборудования
+                                                            </li>
+                                                            <li>
+                                                                <i>si</i> - software interrups, прерывания ПО
+                                                            </li>
+                                                            <li>
+                                                                <i>st</i> - "steale", на обслуживание виртуалзации
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                load average - усредненная загрузка за: 1 мин., 5 мин., 15 мин.
+                                            </li>
+                                            <li>
+                                                <ul>Обобщенная таблица
+                                                    <li>PID - process ID</li>
+                                                    <li>USER - `эфективное` имя пользователя запустившего процесс</li>
+                                                    <li>PR - отображение приоритета процесса относительно ядра</li>
+                                                    <li>NI - отображение значения `nice` у процесса</li>
+                                                    <li>VIRT - общее кол. памяти занятое процессом</li>
+                                                    <li>RES - размер задействованный в RAM памяти</li>
+                                                    <li>%MEM - процент доступной памяти</li>
+                                                    <li>SHR - память, используемая несколькими процессами</li>
+                                                    <li>
+                                                        <ul> S - сотояние процесса одной буквой:
+                                                            <li>Runnable (R)</li>
+                                                            <li>Interruptible sleep (S)</li>
+                                                            <li>Uninterruptible sleep (D)</li>
+                                                            <li>Stopped (T)</li>
+                                                            <li>Zombie (Z))</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        TIME+ - общее время затраченное на процесс со времени старта
+                                                    </li>
+                                                    <li>COMMAND - название процесса</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                    </td>
+                                    <td>
+                                        <div class="td-image">
+                                            <a href="../images/top01.jpg">
+                                                <img src="../images/top01_thumb.jpg" alt="top">
+                                            </a>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-peru">
+            <div class="container">
+                <footer class="pt-4 pt-md-5 border-top">
+                    <div class="row">
+                        <div class="col-12 col-md">
+                            <img class="mb-2" src="#" alt="" width="24" height="24" />
+                            <small class="d-block mb-3 text-muted">&copy; 2019</small>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Новости</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Клевое</a></li>
+                                <li><a class="text-muted" href="#">Странное</a></li>
+                                <li><a class="text-muted" href="#">Интиресное</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>Ресурсы</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Ресурс</a></li>
+                                <li><a class="text-muted" href="#">Классый</a></li>
+                                <li><a class="text-muted" href="#">Еще</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md">
+                            <h5>О нас</h5>
+                            <ul class="list-unstyled text-small">
+                                <li><a class="text-muted" href="#">Команда</a></li>
+                                <li><a class="text-muted" href="#">Расположение</a></li>
+                                <li><a class="text-muted" href="#">Предлагаем</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
