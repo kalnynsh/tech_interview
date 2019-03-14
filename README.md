@@ -8,4 +8,8 @@ Step three: JavaScript.
 
 Step four: DataBase.
 
-Step five: Linux.
+Step five: HTML and CSS.
+
+Step six: Linux.
+
+Step seven: Final test.
