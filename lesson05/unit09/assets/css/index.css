@@ -1,0 +1,79 @@
+.bg-saddlebrown {
+    background-color: #8B4513;
+}
+
+.bg-navajowhite {
+    background-color: #FFDEAD;
+}
+
+.bg-cornsilk {
+    background-color: #FFF8DC;
+}
+
+.bg-peru {
+    background-color: #CD853F;
+}
+
+.text-justified {
+    text-align: justify;
+    font-size: 1.1rem;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.caption-table {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.unit9-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5%;
+
+}
+
+.unit9-table th,
+.unit9-table td,
+th,
+td {
+    border: 1px solid #333;
+    padding: 3px;
+}
+
+.unit9-table thead,
+.unit9-table tfoot,
+thead,
+tfoot {
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.pull-left {
+    float: left;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: rgba(255,255,255, 0.9);
+    border-radius: 20%;
+}
+
+.pull-right {
+    float: right;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 20%;
+}
+
+.clear-fix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.clear-left {
+    clear: left;
+}

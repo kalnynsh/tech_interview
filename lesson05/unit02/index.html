@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>HTML,CSS</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+        <link rel="stylesheet" href="../common/css/main.css" />
+        <link rel="stylesheet" href="assets/css/index.css">
+    </head>
+
+    <body>
+
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+            <h5 class="my-0 mr-md-auto font-weight-normal">Урок 05</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="#">Задание 2</a>
+            </nav>
+            <a class="btn btn-outline-primary" href="#">урок 5</a>
+        </div>
+
+        <div class="lesson-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-5">Задание 2</h1>
+            <p class="lead">
+                Сверстать сложную таблицу с объединением строк и столбцов.
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <p class="caption-table">Материал для гаек по ГОСТ 1759.5–87</p>
+                    <table class="unit2-table">
+                        <thead>
+                            <tr>
+                                <th>№ п/п</th>
+                                <th>Класс прочности</th>
+                                <th>Технологические процессы</th>
+                                <th>Марка стали</th>
+                                <th>Обозначение стандарта</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>Горячая штамповка</td>
+                                <td>20, Ст3кп3, Ст3сп3</td>
+                                <td>ГОСТ 1050–79</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">2</td>
+                                <td rowspan="2">5</td>
+                                <td>Холодная штамповка</td>
+                                <td>10, 10кп</td>
+                                <td rowspan="2">ГОСТ 0702–78</td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:left">Горячая штамповка</td>
+                                <td style="text-align:left">20</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>3</td>
+                                <td>6</td>
+                                <td>Холодная штамповка</td>
+                                <td>10, 10кп, 15, 15кп</td>
+                                <td>ГОСТ 0702–78</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>№ п/п</th>
+                                <th>Класс прочности</th>
+                                <th>Технологические процессы</th>
+                                <th>Марка стали</th>
+                                <th>Обозначение стандарта</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <p class="caption-table2">Соответствие гаек с болтами</p>
+                    <table class="unit2-table2">
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col span="3">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th rowspan="2">№ п/п</th>
+                                <th rowspan="2">Класс прочности гайки</th>
+                                <th colspan="4">Сопрягаемые болты</th>
+                            </tr>
+                            <tr>
+                                <th colspan="3">Класс прочности</th>
+                                <th>Диаметр резьбы</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>4</td>
+                                <td>3,6</td>
+                                <td>4,6</td>
+                                <td>4,8</td>
+                                <td>&gt;М16</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>5</td>
+                                <td>5,6</td>
+                                <td>5,8</td>
+                                <td></td>
+                                <td>&GreaterEqual;М16</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img class="mb-2" src="#" alt="" width="24" height="24" />
+                        <small class="d-block mb-3 text-muted">&copy; 2019</small>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Новости</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Клевое</a></li>
+                            <li><a class="text-muted" href="#">Странное</a></li>
+                            <li><a class="text-muted" href="#">Интиресное</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>Ресурсы</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Ресурс</a></li>
+                            <li><a class="text-muted" href="#">Классый</a></li>
+                            <li><a class="text-muted" href="#">Еще</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md">
+                        <h5>О нас</h5>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-muted" href="#">Команда</a></li>
+                            <li><a class="text-muted" href="#">Расположение</a></li>
+                            <li><a class="text-muted" href="#">Предлагаем</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
